@@ -1,10 +1,10 @@
 # AQA CS AS Notes
 
-## 3.5 Fundamentals of data representation
+## 3.5 Fundamentals of Data Representation
 
 **[Bourne to Code Link](https://bournetocode.com/projects/AQA_AS_Theory/pages/3-5.html)**
 
-## 3.5.1 Number systems
+## 3.5.1 Number Systems
 **Natural Numbers**
 + Definition: These are numbers used for counting.
 + Examples: 0, 1, 2, 3, 4
@@ -37,7 +37,7 @@ N={0,1,2,3...}
 	+ *'a' is the 1st object in the list, 'b' is the 2nd object in the list, etc...*
 
 
-## 3.5.2 Number bases
+## 3.5.2 Number Bases
 **Base 2**
 + Definition: These are binary numbers and are only made of 2 digits (0 and 1). 
 + Place Values: 2<sup>0</sup>, 2<sup>1</sup>, 2<sup>2</sup>, 2<sup>3</sup>, etc...
@@ -78,14 +78,12 @@ N={0,1,2,3...}
 
 ## 3.5.3 Units of Information
 **Bits and Bytes**
-
 + A **bit** is either a 0 or 1
 	+ Binary numbers are made up of bits
 	+ A **byte** is made up of a group of 8 bits
 	+ A **nibble** is a made up of a group of 4 bits
 	
 **Kilobytes and Kibibytes**
-
 + A kilobyte is 1000 (10<sup>3</sup>) bytes
 + A kibibyte is 1024 (2<sup>10</sup>) bytes
 	+ Kibi is the **ki**lo in **bi**nary
@@ -98,7 +96,7 @@ N={0,1,2,3...}
 | **Petabyte (PB)** | **1000<sup>5</sup>** | **Pebibyte (PiB)** | **1024<sup>5</sup>** |
 	 
   	  	  	 
-## 3.5.4 Binary number system
+## 3.5.4 Binary Number System
 **Unsigned Binary**
 + These do not have a bit to indicate that they are positive or negative numbers.
 + An 8 bit **unsigned binary** number has a max value of 255 and there are 256 (2<sup>8</sup>) different values
@@ -149,12 +147,12 @@ Examples:
 
 **Fixed Point Form Binary Representation of Numbers with Fractional Parts**
 
-## 3.5.5 Information encoding system
+## 3.5.5 Information Encoding System
 **Character form of a decimal digit**
 **ASCII and Unicode**
 **Error Checking and correction**
 
-## 3.5.6 Representing images, sound and other data
+## 3.5.6 Representing Images, Sound and Other Data
 **Bit patterns, images,  sound  and other  data**
 **Analogue and digital**
 **Analogue and digital conversion**
