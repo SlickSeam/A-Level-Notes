@@ -143,21 +143,30 @@ Examples:
 		11010011
 ```
 
-**Signed Binary with Two's Complement**
+*Signed Binary with Two's Complement*
 
-**Fixed Point Form Binary Representation of Numbers with Fractional Parts**
+*Fixed Point Form Binary Representation of Numbers with Fractional Parts*
 
 ## 3.5.5 Information Encoding System
-**Character form of a decimal digit**
-**ASCII and Unicode**
-**Error Checking and correction**
+*Character form of a decimal digit*
+
+*ASCII and Unicode*
+
+*Error Checking and correction*
 
 ## 3.5.6 Representing Images, Sound and Other Data
-**Bit patterns, images,  sound  and other  data**
-**Analogue and digital**
-**Analogue and digital conversion**
-**Bitmapped graphics**
-**Digital representation of sound**
-**Musical Instrument Digital Interface (MIDI)**
-**Data compression**
-**Encryption**
+*Bit patterns, images,  sound  and other  data*
+
+*Analogue and digital*
+
+*Analogue and digital conversion*
+
+*Bitmapped graphics*
+
+*Digital representation of sound*
+
+*Musical Instrument Digital Interface (MIDI)*
+
+*Data compression*
+
+*Encryption*
