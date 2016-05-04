@@ -1,0 +1,165 @@
+# AQA CS AS Notes
+
+## 3.5 Fundamentals of data representation
+
+**[Bourne to Code Link](https://bournetocode.com/projects/AQA_AS_Theory/pages/3-5.html)**
+
+## 3.5.1 Number systems
+**Natural Numbers**
++ Definition: These are numbers used for counting.
++ Examples: 0, 1, 2, 3, 4
+``` 
+Counting uses natural number
+A set of natural number can expressed as:
+N={0,1,2,3...}
+
+```
+
+**Integer Numbers**
++ Definition: Any whole number.
++ Examples: -2, -1, 0, 1, 2
+
+**Rational Numbers**
++ Definition: Any number that can be written as a fraction
++ Examples: -1, 0, 1.2, 1/3, 5.5
+
+**Irrational Numbers**
++ Definition: Any number that cannot be written as a fraction
++ Examples: π, √2, √3
+
+**Real numbers**
++ Definition: Any possible real world quantities
++ Examples: √2, 1.23, 3.142, -3, -2, -1, 0, 111, 245.56, 3
+
+**Ordinal numbers**
++ Definition: Used to tell the position of something in a list
++ Examples: List = (a, b, c, d)
+	+ *'a' is the 1st object in the list, 'b' is the 2nd object in the list, etc...*
+
+
+## 3.5.2 Number bases
+**Base 2**
++ Definition: These are binary numbers and are only made of 2 digits (0 and 1). 
++ Place Values: 2<sup>0</sup>, 2<sup>1</sup>, 2<sup>2</sup>, 2<sup>3</sup>, etc...
++ Example: 1010<sub>2</sub>
+
+**Base 10**
++ Definition: These are decimal/denary numbers which use 10 digits to make up their numbers
++ Place Values: 10<sup>0</sup>, 10<sup>1</sup>, 10<sup>2</sup>, 10<sup>3</sup>, etc...
++ Example: 26<sub>10</sub>
+
+**Base 16**
++ Definition: These are hexadecimal numbers
++ Symbols: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+
+**Conversion Between Denary, Binary and Hex**
+
+| Binary | Hexadecimal | Decimal |
+|--------|-------------|---------|
+| 0000   | 0           | 0       |
+| 0001   | 1           | 1       |
+| 0010   | 2           | 2       |
+| 0011   | 3           | 3       |
+| 0100   | 4           | 4       |
+| 0101   | 5           | 5       |
+| 0110   | 6           | 6       |
+| 0111   | 7           | 7       |
+| 1000   | 8           | 8       |
+| 1001   | 9           | 9       |
+| 1010   | A           | 10      |
+| 1011   | B           | 11      |
+| 1100   | C           | 12      |
+| 1101   | D           | 13      |
+| 1110   | E           | 14      |
+| 1111   | F           | 15      |
+
++ For example: 10101101
+	+ Split into nibbles - 1010 1101 ---> Convert each to decimal - 10 13 ---> Convert each to hex - AD
+
+## 3.5.3 Units of Information
+**Bits and Bytes**
+
++ A **bit** is either a 0 or 1
+	+ Binary numbers are made up of bits
+	+ A **byte** is made up of a group of 8 bits
+	+ A **nibble** is a made up of a group of 4 bits
+	
+**Kilobytes and Kibibytes**
+
++ A kilobyte is 1000 (10<sup>3</sup>) bytes
++ A kibibyte is 1024 (2<sup>10</sup>) bytes
+	+ Kibi is the **ki**lo in **bi**nary
+
+| Kilobyte (KB) | 1000   | Kibibyte (KiB) | 1024   |
+|---------------|--------|----------------|--------|
+| **Megabyte (MB)** | **1000<sup>2</sup>** | **Mebibyte (MiB)** | **1024<sup>2</sup>** |
+| **Gigabyte (GB)** | **1000<sup>3</sup>** | **Gibibyte (GiB)** | **1024<sup>3</sup>** |
+| **Terabyte (TB)** | **1000<sup>4</sup>** | **Tebibyte (TiB)** | **1024<sup>4</sup>** |
+| **Petabyte (PB)** | **1000<sup>5</sup>** | **Pebibyte (PiB)** | **1024<sup>5</sup>** |
+	 
+  	  	  	 
+## 3.5.4 Binary number system
+**Unsigned Binary**
++ These do not have a bit to indicate that they are positive or negative numbers.
++ An 8 bit **unsigned binary** number has a max value of 255 and there are 256 (2<sup>8</sup>) different values
+
+**Unsigned Binary Arithmetics**
++ Binary addition rules:
+	+ 0+0=0
+	+ 0+1=1
+	+ 1+1=10 (meaning the 1 is carried over and the number stays as 0)
+	+ 1+1+1=10+1=11 (meaning the 1 is carried over and the number becomes 1)
++ Addition:
+``` Examples
+ 1010                               1010
++0010                              +1111
+  1< carry over the bit              1<
+-----                               1< carry over the bits
+ 1100                              -----
+                                   11000
+```                                
++ Binary multiplication rules:
+	+ 0x0=0
+	+ 1x1=1
+	+ 0x1=0
++ Multiplication:
+``` Examples
+   11                               1010
+  x10                               x101
+-----                              -----
+   00                               1010
+  11                               0000
+  110 < the product               1010
+                                  110010 <  the product
+```  
+
+**Signed Binary**
++ These use one bit to indicate positive or negative
++ An 8 bit **signed binary** number has a max value of 127 and there are 128 (2<sup>7</sup>) different values
++ The left most number (the most significant bit) is used to show positive (0) or negative (1)
+```
+Examples:
+	An 8 bit positive binary number -
+		01010011
+	An 8 bit negative binary number -
+		11010011
+```
+
+**Signed Binary with Two's Complement**
+
+**Fixed Point Form Binary Representation of Numbers with Fractional Parts**
+
+## 3.5.5 Information encoding system
+**Character form of a decimal digit**
+**ASCII and Unicode**
+**Error Checking and correction**
+
+## 3.5.6 Representing images, sound and other data
+**Bit patterns, images,  sound  and other  data**
+**Analogue and digital**
+**Analogue and digital conversion**
+**Bitmapped graphics**
+**Digital representation of sound**
+**Musical Instrument Digital Interface (MIDI)**
+**Data compression**
+**Encryption**
