@@ -10,7 +10,7 @@ import random
 #==================================================================================================#
 #Asks the player what row and column they want to hit
 def GetRowColumn():
-print()
+    print()
     Column = int(input("Please enter column: "))
     Row = int(input("Please enter row: "))
     print()
