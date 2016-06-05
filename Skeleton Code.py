@@ -19,7 +19,7 @@ print()
 ####################################################################################################
 
 
-          
+
 def MakePlayerMove(Board, Ships):
     Row, Column = GetRowColumn() #Uses a function to ask what row and column the player wants to hit
         if Board[Row][Column] == "m" or Board[Row][Column] == "h":
