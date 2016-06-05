@@ -11,89 +11,89 @@ import random
 #Asks the player what row and column they want to hit
 def GetRowColumn():
 print()
-  Column = int(input("Please enter column: "))
-  Row = int(input("Please enter row: "))
-  print()
-  return Row, Column
+    Column = int(input("Please enter column: "))
+    Row = int(input("Please enter row: "))
+    print()
+    return Row, Column
 #==================================================================================================#
 ####################################################################################################
 
 
           
 def MakePlayerMove(Board, Ships):
-  Row, Column = GetRowColumn() #Uses a function to ask what row and column the player wants to hit
-  if Board[Row][Column] == "m" or Board[Row][Column] == "h":
-    print("Sorry, you have already shot at the square (" + str(Column) + "," + str(Row) + "). Please try again.")
-  elif Board[Row][Column] == "-":
-    print("Sorry, (" + str(Column) + "," + str(Row) + ") is a miss.")
-    Board[Row][Column] = "m" #if the point is a miss, it displays this on the board using "m"
-  else:
-    print("Hit at (" + str(Column) + "," + str(Row) + ").")
-    Board[Row][Column] = "h"
+    Row, Column = GetRowColumn() #Uses a function to ask what row and column the player wants to hit
+        if Board[Row][Column] == "m" or Board[Row][Column] == "h":
+            print("Sorry, you have already shot at the square (" + str(Column) + "," + str(Row) + "). Please try again.")
+        elif Board[Row][Column] == "-":
+            print("Sorry, (" + str(Column) + "," + str(Row) + ") is a miss.")
+            Board[Row][Column] = "m" #if the point is a miss, it displays this on the board using "m"
+        else:
+            print("Hit at (" + str(Column) + "," + str(Row) + ").")
+            Board[Row][Column] = "h"
 #==================================================================================================#
 ####################################################################################################  
 
 
 #==================================================================================================#        
 def SetUpBoard(): #Creates a 10x10 board filled with dashes
-  Board = []
-  for Row in range(10): #This will loop and create 10 instances of Row
-    BoardRow = [] #Sets BoardRow as being empty
-    for Column in range(10): #This will loop create 10 instances of Column
-      BoardRow.append("-") #Adds 10 dashes to BoardRow
-    Board.append(BoardRow) #Adds BoardRow to Board to create a 2D array (this means there will be 10 lists of 10 dashes)
-  return Board
+    Board = []
+    for Row in range(10): #This will loop and create 10 instances of Row
+        BoardRow = [] #Sets BoardRow as being empty
+        for Column in range(10): #This will loop create 10 instances of Column
+        BoardRow.append("-") #Adds 10 dashes to BoardRow
+        Board.append(BoardRow) #Adds BoardRow to Board to create a 2D array (this means there will be 10 lists of 10 dashes)
+    return Board
 #==================================================================================================#
 ####################################################################################################
 
 
 #==================================================================================================#
 def LoadGame(Filename, Board):
-  BoardFile = open(Filename, "r") #loads board from a text file
-  for Row in range(10): #imports the board from the text file into a 2D array
-    Line = BoardFile.readline()
-    for Column in range(10):
-      Board[Row][Column] = Line[Column]
-  BoardFile.close()
+    BoardFile = open(Filename, "r") #loads board from a text file
+    for Row in range(10): #imports the board from the text file into a 2D array
+        Line = BoardFile.readline()
+        for Column in range(10):
+            Board[Row][Column] = Line[Column]
+    BoardFile.close()
 #==================================================================================================#
 ####################################################################################################
 
 
 #==================================================================================================#
 def PlaceRandomShips(Board, Ships): #Randomises the place where the ship is placed
-  for Ship in Ships: #uses a for loop to run through each ship
-    Valid = False
-    while not Valid:
-      Row = random.randint(0, 9) #decides what row the ship starts in
-      Column = random.randint(0, 9) #decides what column the ship starts in
-      HorV = random.randint(0, 1) #decides whether the ship is horizontal or vertical
-      #################
-      if HorV == 0:
-        Orientation = "v" 
-      else:
-        Orientation = "h"
-      ################# Assigns a "v" or "h" to Orientation depending on HorV
-      Valid = ValidateBoatPosition(Board, Ship, Row, Column, Orientation) #uses a function to check if it's a valid position
-      #If valid is false then it runs through the while loop to give the ship a new position
-      #If valid is true then it just continues
-    print("Computer placing the " + Ship[0])
-    PlaceShip(Board, Ship, Row, Column, Orientation) #uses a function to put the ship on the board
+    for Ship in Ships: #uses a for loop to run through each ship
+        Valid = False
+        while not Valid:
+            Row = random.randint(0, 9) #decides what row the ship starts in
+            Column = random.randint(0, 9) #decides what column the ship starts in
+            HorV = random.randint(0, 1) #decides whether the ship is horizontal or vertical
+            #################
+            if HorV == 0:
+                Orientation = "v" 
+            else:
+                Orientation = "h"
+            ################# Assigns a "v" or "h" to Orientation depending on HorV
+            Valid = ValidateBoatPosition(Board, Ship, Row, Column, Orientation) #uses a function to check if it's a valid position
+            #If valid is false then it runs through the while loop to give the ship a new position
+            #If valid is true then it just continues
+        print("Computer placing the " + Ship[0])
+        PlaceShip(Board, Ship, Row, Column, Orientation) #uses a function to put the ship on the board
 #==================================================================================================#
 ####################################################################################################
 
 
 #==================================================================================================#
 def PlaceShip(Board, Ship, Row, Column, Orientation): #actually places the ship on the board
-  ################################ Vertical ships
-  if Orientation == "v": 
-    for Scan in range(Ship[1]):
-      Board[Row + Scan][Column] = Ship[0][0] #adds the letter corresponding to the ship to Board in the position
-                  #Scan adds onto Row so the letter of the ship moves vertically on the board
-  ################################ Horizontal ships
-  elif Orientation == "h":
-    for Scan in range(Ship[1]):
-      Board[Row][Column + Scan] = Ship[0][0] #adds the letter corresponding to the ship to Board in the position
-                  #Scan adds onto Row so the letter of the ship moves vertically on the board
+    ################################ Vertical ships
+    if Orientation == "v": 
+        for Scan in range(Ship[1]):
+            Board[Row + Scan][Column] = Ship[0][0] #adds the letter corresponding to the ship to Board in the position
+                                #Scan adds onto Row so the letter of the ship moves vertically on the board
+    ################################ Horizontal ships
+    elif Orientation == "h":
+        for Scan in range(Ship[1]):
+            Board[Row][Column + Scan] = Ship[0][0] #adds the letter corresponding to the ship to Board in the position
+                                #Scan adds onto Row so the letter of the ship moves vertically on the board
 #==================================================================================================#
 ####################################################################################################
 
