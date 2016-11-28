@@ -1,0 +1,50 @@
+# AQA CS A-Level Notes
+
+## 4.2 Fundamentals of Data Structures
+
+**[Bourne to Code Link](https://bournetocode.com/projects/AQA_A_Theory/pages/4-2.html)**
+
+## Data Structures and Abstract Data Types
+**Data Structures**
++ **Data Structure** is a collection of data that is organised for easy processing
+	+ **Dynamic Data Structure** is a collection of data in memory that can grow or shrink in size. E.g. Python's list
+  + **Heap** is memory allocated at run-time for new items to be added to dynamic data structure
+  + **Static Data Structure** is fixed in size at a compilation time and cannot be resized to hold more items or to remove items to free up memory
+    + E.g. a static array in VB. Python does not have a built-in array type
+    
+**Single and Multi-Dimensional Arrays**
++ **Array** is a collection of elements with **the same** data type
++ **One-dimensional array** has a single index to indicate the location/order of an item in the structure
++ **Two dimensional array** has two indices to indicate the location/order of an item in the structure such as a matrix or a grid
++ **Three dimensional array** has three indices, such as points in a cube
+
+## Abstract Data Types/Data Structures
+**Abstract Data Type (ADT)** is a logical description of how the data is viewed and the operations can be performed on it, but how to implement it may not be known
+
+**Stacks**
++ **Stack** is an abstract data type with a collection of elements where a new element is added to the top of the stack (push) and the most recently element is removed (pop) first
++ A stack has the following operations performed on it:
+ + **push**: add a new item to the top of the stack
+ + **pop**: remove the most recently added element from the top of the stack
+ + **peek or top**: read the content of the top element without modifying it
+ + **isFull**: check if the stack is full
+ + **isEmpty**: check if the stack is empty
+
+**Queues**:
++ A **queue** is a first in, first out (FIFO) data structure
++ New element is added to the end of the queue
++ Elements can only be retrieved from the start of the queue
++ The order of the elements are the order in which they are inserted
++ Queues can be implemented using Array, Linked-list, Pointer
++ Queues can be used for:
+  + printing: jobs to be printed is stored on disk in a queue. The printer prints them in the order it receives - first come, first print. This allows users to work on other tasks after sending the printing jobs to the queue.
+  + Keyboard buffer queue: characters stored in a queue in a keyboard buffer.
++ Regardless what is used to implement a queue, the operations are the same
++ **Operations on queues:
+  + add a new item to the queue (**enQueue()**)
+  + retrieve the item at the start of the queue (**peek**)
+  + remove an item from the start of the queue (**deQueue()**)
+  + check if a queue is empty (**isEmpty()**)
+  + check if a fixed size queue is full (**isFull()**)
+  
+  
